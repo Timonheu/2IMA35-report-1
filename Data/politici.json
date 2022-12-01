@@ -1,0 +1,16 @@
+{
+  "politici": [
+    {
+      "naam": "Aartsen, A.A.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Kort, A.H.J. de",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "Daandekort92"
+    }
+  ]
+}
