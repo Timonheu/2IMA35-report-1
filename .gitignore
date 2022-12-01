@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 Datasets/
-Results/test
+Code Kees/Results/test
 Results_buckets/
 Results_w_noise/!/twitter.conf
 
