@@ -7,6 +7,7 @@ exec(open("twitter.conf").read())
 
 # authenticate
 client = tweepy.Client(bearerToken)
+client.wait_on_rate_limit = True
 
 # people for which we will collect the people they follow
 file = open("Data/politici.json")
@@ -45,7 +46,6 @@ for politician in politiciDict["politici"]:
     output[counter]["following"] = indexList
     counter += 1
     print(politician["naam"])
-    time.sleep(1)
 
 json_object = json.dumps(output)
 
