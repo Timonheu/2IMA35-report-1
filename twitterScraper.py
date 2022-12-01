@@ -1,5 +1,6 @@
 import tweepy
 import json
+import time
 
 # Get the API keys
 exec(open("twitter.conf").read())
@@ -28,9 +29,10 @@ for politician in politiciDict["politici"]:
     # Add the username of each followed person to the list
     for data in followedResponse.data:
         followed.append(data)
-    if len(followed) == 1000:
-        # This means the limit of our request was reached and the politician follows at least 1000 people
-        print("AAAH " + politician["naam"] + " van " + politician["partij"] + " volgt te veel mensen")
+    while not followedResponse.meta.get("next_token") is None:
+        # This there are more followers left
+        nextToken = followedResponse.meta["next_token"]
+        followedResponse = client.get_users_following(user.data.id, max_results=1000, pagination_token=nextToken)
 
     # list of indexes in handleList of people that this person follows
     indexList = []
@@ -42,6 +44,8 @@ for politician in politiciDict["politici"]:
 
     output[counter]["following"] = indexList
     counter += 1
+    print(politician["naam"])
+    time.sleep(1)
 
 json_object = json.dumps(output)
 
