@@ -30,14 +30,15 @@ for politician in politiciDict["politici"]:
         followed.append(data)
     if len(followed) == 1000:
         # This means the limit of our request was reached and the politician follows at least 1000 people
-        print("AAAH " + politician["naam"] + " van " + politician["party"] + " volgt te veel mensen")
+        print("AAAH " + politician["naam"] + " van " + politician["partij"] + " volgt te veel mensen")
 
     # list of indexes in handleList of people that this person follows
     indexList = []
     for person in followed:
         for politicus in politiciDict["politici"]:
             if person.username.lower() == politicus["twitterHandle"].lower():
-                indexList.append(politicus["twitterHandle"].index(politicus))
+                index = politiciDict["politici"].index(politicus)
+                indexList.append(index)
 
     output[counter]["following"] = indexList
     counter += 1
