@@ -1,19 +1,22 @@
 import tweepy
-import sys
-import os
-import wget
 
 # OAuth Authentication
-config = {}
 exec(open("twitter.conf").read())
 
-auth = tweepy.OAuthHandler(apiKey, apiSecretKey)
-auth.set_access_token(accessToken, accessTokenSecret)
-api = tweepy.API(auth)
+# auth = tweepy.OAuthHandler(apiKey, apiSecretKey)
+# auth.set_access_token(accessToken, accessTokenSecret)
+# api = tweepy.API(auth)
+client = tweepy.Client(bearerToken)
 
 handleList = ["thierrybaudet"]
 
 for handle in handleList:
-    user = api.get_user(user_id=handle)
-    followers = user.followers()
-    print(followers)
+    user = client.get_user(username=handle)
+
+    followers = client.get_users_following(user.data.id, max_results=1000)
+    counter = 0
+    for data in followers.data:
+        print(data.username)
+        counter += 1
+    if counter == 1000:
+        print("AAAH " + handle + "volgt te veel mensen")
