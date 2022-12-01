@@ -11,8 +11,14 @@ client = tweepy.Client(bearerToken)
 file = open("Data/politici.json")
 politiciDict = json.load(file)
 
+output = {}
+counter = 0
 for politician in politiciDict["politici"]:
+
+    output[counter] = politician
+
     if not politician["heeftTwitter"]:
+        counter += 1
         continue
     user = client.get_user(username=politician["twitterHandle"])
 
@@ -32,3 +38,11 @@ for politician in politiciDict["politici"]:
         for politicus in politiciDict["politici"]:
             if person.username.lower() == politicus["twitterHandle"].lower():
                 indexList.append(politicus["twitterHandle"].index(politicus))
+
+    output[counter]["following"] = indexList
+    counter += 1
+
+json_object = json.dumps(output)
+
+with open("Results/Twitter Output/output.json", "w") as outfile:
+    outfile.write(json_object)
