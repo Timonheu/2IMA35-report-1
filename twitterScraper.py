@@ -19,6 +19,7 @@ peopleDict = json.load(people)
 # Per person, check if we have already scraped the followers, and if not, do so and write it to file
 scrapedDirPath = "Data/Output/TwitterScrape"
 
+count = 0
 for person in peopleDict["politici"]:
     # Cannot scrape if no twitter
     if not person["heeftTwitter"]:
@@ -29,6 +30,9 @@ for person in peopleDict["politici"]:
     scrapeName = scrapedDirPath + "/" + handle.lower() + ".json"
     if exists(scrapeName):
         continue
+
+    # Mark that we are scraping new profile
+    count += 1
 
     # Create a dictionary for the output
     outputPerson = dict(person)
@@ -53,3 +57,8 @@ for person in peopleDict["politici"]:
     outputPersonJson = json.dumps(outputPerson)
     with open(scrapeName, "w") as outputFile:
         outputFile.write(outputPersonJson)
+
+if count == 0:
+    print("No new profiles to scrape")
+else:
+    print("Scraped " + str(count) + " new profiles")
