@@ -129,6 +129,12 @@ dmypy.json
 .pyre/
 
 Datasets/
-Results/test
+Code Kees/Results/test
 Results_buckets/
-Results_w_noise/
+Results_w_noise/!/twitter.conf
+
+# twitter crawler
+twitter.conf
+
+# jetbrains
+.idea

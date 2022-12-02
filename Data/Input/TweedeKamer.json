@@ -1,0 +1,904 @@
+{
+  "politici": [
+    {
+      "naam": "Aartsen, A.A.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Becker, B.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "bentebecker"
+    },
+    {
+      "naam": "Bevers, H.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "Harry_Bevers"
+    },
+    {
+      "naam": "Brekelmans, R.P.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "rubenbrekelmans"
+    },
+    {
+      "naam": "Campen, A.A.H. van",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "ThomvCampen"
+    },
+    {
+      "naam": "El Yassini, Z.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "ZelYassini"
+    },
+    {
+      "naam": "Ellian, U.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "UlysseEllian"
+    },
+    {
+      "naam": "Erkens, S.P.A.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "SilvioErkens"
+    },
+    {
+      "naam": "Grevink, M.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Groot, P.C. de",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "pedegro"
+    },
+    {
+      "naam": "Haverkort, E.A.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Heerema, R.J.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "rudmer"
+    },
+    {
+      "naam": "Heinen, E.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Hermans, S.T.M.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Hil, J. van den",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "jacquelinevdhil"
+    },
+    {
+      "naam": "Idsinga, F.L.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Kamminga, R.J.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Klink, J.J.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "KlinkJan"
+    },
+    {
+      "naam": "Koerhuis, D.A.N.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "danielkoerhuis"
+    },
+    {
+      "naam": "Kort, A.H.J. de",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "Daandekort92"
+    },
+    {
+      "naam": "Michon-Derkzen, I.J.M.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "ingridmichon"
+    },
+    {
+      "naam": "Minhas, F.B.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "minhas_fahid"
+    },
+    {
+      "naam": "Paul, M.L.J.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Rahimi, H.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "HawreRahimi"
+    },
+    {
+      "naam": "Rajkowski, Q.M.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "QueenyRaj"
+    },
+    {
+      "naam": "Simons, C.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "chrsimons"
+    },
+    {
+      "naam": "Smals, B.M.G.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "bsmals"
+    },
+    {
+      "naam": "Strien, P.J.T. van",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "PimVanStrien"
+    },
+    {
+      "naam": "Strolenberg, M.F.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "strolenberg"
+    },
+    {
+      "naam": "Tielen, J.Z.C.M.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "JudithTielenVVD"
+    },
+    {
+      "naam": "Valstar, P.J.",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "pvalstar"
+    },
+    {
+      "naam": "Verkuijlen, R.",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Wijngaarden, J. van",
+      "partij": "VVD",
+      "heeftTwitter": true,
+      "twitterHandle": "vanwijngaardenj"
+    },
+    {
+      "naam": "Woude, H.H. van der",
+      "partij": "VVD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Belhaj, S.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "SalimaBelhaj"
+    },
+    {
+      "naam": "Bergkamp, V.A.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Vera_Bergkamp"
+    },
+    {
+      "naam": "Beukering-Huijbregts, M.J.T.G. van",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Marijke_vB"
+    },
+    {
+      "naam": "Boucke, R.M.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "RaoulBoucke"
+    },
+    {
+      "naam": "Boulakjar, F.",
+      "partij": "D66",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Dekker-Abdulaziz, H.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Hind_D66"
+    },
+    {
+      "naam": "Ginneken, L.M.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "LisaGinneken"
+    },
+    {
+      "naam": "Groot, T.C. de",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "TjeerdD66"
+    },
+    {
+      "naam": "Hagen, K.B.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "kbhagen"
+    },
+    {
+      "naam": "Hammelburg, A.R.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Ahammelburg"
+    },
+    {
+      "naam": "Jong, R.H. de",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "RomkeDeJong"
+    },
+    {
+      "naam": "Kat, H.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "HulyaKatD66"
+    },
+    {
+      "naam": "Laan, J.M.P. van der",
+      "partij": "D66",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Meenen, P.H. van",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Paul_van_Meenen"
+    },
+    {
+      "naam": "Paternotte, J.M.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "jpaternotte"
+    },
+    {
+      "naam": "Paulusma, W.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "wiepau"
+    },
+    {
+      "naam": "Podt, A.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Annemarijke"
+    },
+    {
+      "naam": "Raemakers, R.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "RensRaemakers"
+    },
+    {
+      "naam": "Sahla, F.",
+      "partij": "D66",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Sjoerdsma, S.W.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "swsjoerdsma"
+    },
+    {
+      "naam": "Sneller, J.C.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Sneller"
+    },
+    {
+      "naam": "Werf, J.J. van der",
+      "partij": "D66",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Weyenberg, S.P.R.A. van",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "svanweyenberg"
+    },
+    {
+      "naam": "Wuite, J.",
+      "partij": "D66",
+      "heeftTwitter": true,
+      "twitterHandle": "Wuite_Jorien"
+    },
+    {
+      "naam": "Agema, M.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "FleurAgemaPVV"
+    },
+    {
+      "naam": "Beertema, H.J.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "harmbeertema"
+    },
+    {
+      "naam": "Bosma, M.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "Martinbosma_pvv"
+    },
+    {
+      "naam": "Dijck, A.P.C. van",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Fritsma, S.R.",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Graaf, M. de",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "GraafdeMachiel"
+    },
+    {
+      "naam": "Graus, D.J.G.",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Helder, L.M.J.S.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "lilianhelderpvv"
+    },
+    {
+      "naam": "Jong, L.W.E. de",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Kops, A.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "KopsPVV"
+    },
+    {
+      "naam": "Madlener, B.",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Maeijer, V.",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Markuszower, G.",
+      "partij": "PVV",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Mulder, E.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "edgarmulder1"
+    },
+    {
+      "naam": "Roon, R. de",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "r_deroonpvv"
+    },
+    {
+      "naam": "Weerdenburg, V.D.D. van",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "Danai_PVV"
+    },
+    {
+      "naam": "Wilders, G.",
+      "partij": "PVV",
+      "heeftTwitter": true,
+      "twitterHandle": "geertwilderspvv"
+    },
+    {
+      "naam": "Amhaouch, M.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "MustafaAmhaouch"
+    },
+    {
+      "naam": "Berg, J.A.M.J. van den",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "JobaCDA"
+    },
+    {
+      "naam": "Bontenbal, H.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "HenriBontenbal"
+    },
+    {
+      "naam": "Boswijk, D.G.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "DerkBoswijk"
+    },
+    {
+      "naam": "Dijk, I. van",
+      "partij": "CDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Geurts, J.L.",
+      "partij": "CDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Heerma, P.E.",
+      "partij": "CDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Knops, R.W.",
+      "partij": "CDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Kuik, A.",
+      "partij": "CDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Molen, H. van der",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "harryvdmolen"
+    },
+    {
+      "naam": "Mulder, A.H.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "AgnesMulderCDA"
+    },
+    {
+      "naam": "Palland, H.M.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "Hilde_PM"
+    },
+    {
+      "naam": "Peters, W.P.H.J.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "RenePetersOss"
+    },
+    {
+      "naam": "Werner, L.M.",
+      "partij": "CDA",
+      "heeftTwitter": true,
+      "twitterHandle": "LucilleWerner"
+    },
+    {
+      "naam": "Bushoff, T.J.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "JulianBushoff"
+    },
+    {
+      "naam": "Hoop, H.E. de",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "HabtamudeHoop"
+    },
+    {
+      "naam": "KathMann, B.C.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "BarbaraKathmann"
+    },
+    {
+      "naam": "Kuiken, A.H.",
+      "partij": "PVDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Mohandis, M.",
+      "partij": "PVDA",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Mutuer, S.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "songulmutluer"
+    },
+    {
+      "naam": "Nijboer, H.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "henknijboer"
+    },
+    {
+      "naam": "Piri, K.P.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "KatiPiri"
+    },
+    {
+      "naam": "Thijssen, J.",
+      "partij": "PVDA",
+      "heeftTwitter": true,
+      "twitterHandle": "Joris_PvdA"
+    },
+    {
+      "naam": "Alkaya, M.Ö.",
+      "partij": "SP",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Beckerman, S.M.",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "SandraBeckerman"
+    },
+    {
+      "naam": "Dijk, J.J. van",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "JaspervanDijkSP"
+    },
+    {
+      "naam": "Hijink, H.P.M.",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "MaartenHijink"
+    },
+    {
+      "naam": "Kent, B. van",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "bartvankent"
+    },
+    {
+      "naam": "Kwint, J.P.",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "peterkwint"
+    },
+    {
+      "naam": "Leijten, R.M.",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "RenskeLeijten"
+    },
+    {
+      "naam": "Marijnissen, L.M.C.",
+      "partij": "SP",
+      "heeftTwitter": true,
+      "twitterHandle": "MarijnissenL"
+    },
+    {
+      "naam": "Nispen, M. van",
+      "partij": "SP",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Bouchalilikh, K.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "Kauthar_"
+    },
+    {
+      "naam": "Bromet, L.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "LauraBromet"
+    },
+    {
+      "naam": "Ellemeet, C.E.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "CorinneEllemeet"
+    },
+    {
+      "naam": "Klaver, J.F.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "jesseklaver"
+    },
+    {
+      "naam": "Kröger, S.C.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "suzanne_GL"
+    },
+    {
+      "naam": "Lee, T.M.T. van der",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "TomvanderLee"
+    },
+    {
+      "naam": "Maatoug, S.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "SennaMaatoug"
+    },
+    {
+      "naam": "Westerveld, E.M.",
+      "partij": "Groenlinks",
+      "heeftTwitter": true,
+      "twitterHandle": "Lisawesterveld"
+    },
+    {
+      "naam": "Akerboom, E.S.",
+      "partij": "PvDD",
+      "heeftTwitter": true,
+      "twitterHandle": "EvaAkerboom"
+    },
+    {
+      "naam": "Esch, E.M. van",
+      "partij": "PvDD",
+      "heeftTwitter": true,
+      "twitterHandle": "EvavanEsch"
+    },
+    {
+      "naam": "Raan, L. van",
+      "partij": "PvDD",
+      "heeftTwitter": true,
+      "twitterHandle": "LammertvanRaan"
+    },
+    {
+      "naam": "Teunissen, C.",
+      "partij": "PvDD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Vestering, L.",
+      "partij": "PvDD",
+      "heeftTwitter": true,
+      "twitterHandle": "LeonieVestering"
+    },
+    {
+      "naam": "Wassenberg, F.P.",
+      "partij": "PvDD",
+      "heeftTwitter": true,
+      "twitterHandle": "WassenbergFrank"
+    },
+    {
+      "naam": "Bikker, M.H.",
+      "partij": "ChristenUnie",
+      "heeftTwitter": true,
+      "twitterHandle": "mirjambikker"
+    },
+    {
+      "naam": "Ceder, D.G.M.",
+      "partij": "ChristenUnie",
+      "heeftTwitter": true,
+      "twitterHandle": "DonCeder"
+    },
+    {
+      "naam": "Graaf, S.J.F. van der",
+      "partij": "ChristenUnie",
+      "heeftTwitter": true,
+      "twitterHandle": "StienekevdGraaf"
+    },
+    {
+      "naam": "Grinwis, P.A.",
+      "partij": "ChristenUnie",
+      "heeftTwitter": true,
+      "twitterHandle": "Pieter_Grinwis"
+    },
+    {
+      "naam": "Segers, G.J.M.",
+      "partij": "ChristenUnie",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Baudet, T.H.P.",
+      "partij": "FvD",
+      "heeftTwitter": true,
+      "twitterHandle": "thierrybaudet"
+    },
+    {
+      "naam": "Dekker, R.J.",
+      "partij": "FvD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Houwelingen, P. van",
+      "partij": "FvD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Jansen, F.J.H.",
+      "partij": "FvD",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Meijeren, G.F.C. van",
+      "partij": "FvD",
+      "heeftTwitter": true,
+      "twitterHandle": "GideonvMeijeren"
+    },
+    {
+      "naam": "Azarkan, F.",
+      "partij": "DENK",
+      "heeftTwitter": true,
+      "twitterHandle": "F_azarkan"
+    },
+    {
+      "naam": "Baarle, S.R.T. van",
+      "partij": "DENK",
+      "heeftTwitter": true,
+      "twitterHandle": "StephanvBaarle"
+    },
+    {
+      "naam": "Kuzu, T.",
+      "partij": "DENK",
+      "heeftTwitter": true,
+      "twitterHandle": "tunahankuzu"
+    },
+    {
+      "naam": "Ephraim, O.R.",
+      "partij": "Groep van Haga",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Haga, W.R. van",
+      "partij": "Groep van Haga",
+      "heeftTwitter": true,
+      "twitterHandle": "WybrenvanHaga"
+    },
+    {
+      "naam": "Smolders, H.A.J.",
+      "partij": "Groep van Haga",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Eerdmans, B.J.",
+      "partij": "JA21",
+      "heeftTwitter": true,
+      "twitterHandle": "Eerdmans"
+    },
+    {
+      "naam": "Eppink, D.J.",
+      "partij": "JA21",
+      "heeftTwitter": true,
+      "twitterHandle": "djeppink"
+    },
+    {
+      "naam": "Pouw-Verweij, N.J.F.",
+      "partij": "JA21",
+      "heeftTwitter": true,
+      "twitterHandle": "NickiVerweij"
+    },
+    {
+      "naam": "Bisschop, R.",
+      "partij": "SGP",
+      "heeftTwitter": true,
+      "twitterHandle": "BisschopRoelof"
+    },
+    {
+      "naam": "Staaij, C.G. van der",
+      "partij": "SGP",
+      "heeftTwitter": true,
+      "twitterHandle": "keesvdstaaij"
+    },
+    {
+      "naam": "Stoffer, C.",
+      "partij": "SGP",
+      "heeftTwitter": false,
+      "twitterHandle": ""
+    },
+    {
+      "naam": "Dassen, L.A.J.M.",
+      "partij": "Volt",
+      "heeftTwitter": true,
+      "twitterHandle": "DassenLaurens"
+    },
+    {
+      "naam": "Koekoek, M.",
+      "partij": "Volt",
+      "heeftTwitter": true,
+      "twitterHandle": "KoekkoekMarieke"
+    },
+    {
+      "naam": "Plas, C.A.M. van der",
+      "partij": "BBB",
+      "heeftTwitter": true,
+      "twitterHandle": "lientje1967"
+    },
+    {
+      "naam": "Simons, S.H.",
+      "partij": "Bij1",
+      "heeftTwitter": true,
+      "twitterHandle": "SylvanaBIJ1"
+    },
+    {
+      "naam": "Haan, N.L. den",
+      "partij": "Fractie Den Haan",
+      "heeftTwitter": true,
+      "twitterHandle": "LianedenHaan"
+    },
+    {
+      "naam": "Gündoğan, N.",
+      "partij": "Gündoğan",
+      "heeftTwitter": true,
+      "twitterHandle": "ngundogan77"
+    },
+    {
+      "naam": "Omtzigt, P.H.",
+      "partij": "Omtzigt",
+      "heeftTwitter": true,
+      "twitterHandle": "PieterOmtzigt"
+    }
+  ]
+}
