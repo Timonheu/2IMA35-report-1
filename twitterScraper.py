@@ -1,53 +1,55 @@
 import tweepy
 import json
-import time
+import configparser
+from os.path import exists
 
 # Get the API keys
-exec(open("twitter.conf").read())
+cp = configparser.ConfigParser()
+cp.read("twitter.conf")
+bearerToken = cp.get("Twitter", "bearerToken")
 
-# authenticate
+# Setup API connection
 client = tweepy.Client(bearerToken)
 client.wait_on_rate_limit = True
 
-# people for which we will collect the people they follow
-file = open("Data/politici.json")
-politiciDict = json.load(file)
+# Load file containing the people for which we want to collect the people they follow
+people = open("Data/Input/TweedeKamer.json")
+peopleDict = json.load(people)
 
-output = {}
-counter = 0
-for politician in politiciDict["politici"]:
+# Per person, check if we have already scraped the followers, and if not, do so and write it to file
+scrapedDirPath = "Data/Output/TwitterScrape"
 
-    output[counter] = politician
-
-    if not politician["heeftTwitter"]:
-        counter += 1
+for person in peopleDict["politici"]:
+    # Cannot scrape if no twitter
+    if not person["heeftTwitter"]:
         continue
-    user = client.get_user(username=politician["twitterHandle"])
+    handle = person["twitterHandle"]
 
-    # API response contaning the people followed by this politician
+    # If already scraped, no need to do it again
+    scrapeName = scrapedDirPath + "/" + handle.lower() + ".json"
+    if exists(scrapeName):
+        continue
+
+    # Create a dictionary for the output
+    outputPerson = dict(person)
+    outputPerson["twitterHandle"] = handle.lower()
+    outputPerson["follows"] = []
+
+    # Request the people followed by person from the API
+    user = client.get_user(username=handle)
     followedResponse = client.get_users_following(user.data.id, max_results=1000)
-    followed = []
     # Add the username of each followed person to the list
     for data in followedResponse.data:
-        followed.append(data)
+        outputPerson["follows"].append(data.username.lower())
+
     while not followedResponse.meta.get("next_token") is None:
         # This there are more followers left
         nextToken = followedResponse.meta["next_token"]
         followedResponse = client.get_users_following(user.data.id, max_results=1000, pagination_token=nextToken)
+        for data in followedResponse.data:
+            outputPerson["follows"].append(data.username.lower())
 
-    # list of indexes in handleList of people that this person follows
-    indexList = []
-    for person in followed:
-        for politicus in politiciDict["politici"]:
-            if person.username.lower() == politicus["twitterHandle"].lower():
-                index = politiciDict["politici"].index(politicus)
-                indexList.append(index)
-
-    output[counter]["following"] = indexList
-    counter += 1
-    print(politician["naam"])
-
-json_object = json.dumps(output)
-
-with open("Results/Twitter Output/output.json", "w") as outfile:
-    outfile.write(json_object)
+    # Write the scraped data to disk
+    outputPersonJson = json.dumps(outputPerson)
+    with open(scrapeName, "w") as outputFile:
+        outputFile.write(outputPersonJson)
