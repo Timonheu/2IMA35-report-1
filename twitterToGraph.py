@@ -31,3 +31,10 @@ for i in range(peopleCount):
 # Write the graph to file
 with open("Data/Output/followingGraph.json", "w") as outputFile:
     followingGraph.tofile(outputFile)
+
+# Also write the people file on which the graph is based to file
+with open("Data/Output/followingGraphMetadata.json", "w") as outputFile:
+    twitterScrapesJson = json.dumps(twitterScrapes)
+    outputFile.write(twitterScrapesJson)
+
+print(followingGraph)
