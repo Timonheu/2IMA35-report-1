@@ -1,6 +1,7 @@
 from os import listdir
 import json
 import numpy as np
+import sys
 
 twitterScrapesDir = "Data/Output/TwitterScrape"
 twitterScrapes = []
@@ -37,4 +38,5 @@ with open("Data/Output/followingGraphMetadata.json", "w") as outputFile:
     twitterScrapesJson = json.dumps(twitterScrapes)
     outputFile.write(twitterScrapesJson)
 
+np.set_printoptions(threshold=sys.maxsize)
 print(followingGraph)
