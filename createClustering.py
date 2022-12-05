@@ -17,12 +17,26 @@ weightedGraph = None
 with open("Data/Output/weightedGraph.json", "r") as graphFile:
     weightedGraph = np.fromfile(graphFile).reshape(peopleCount, peopleCount)
 
+# Make adjacency matrix into adjacency list
+adjacencyList = []
+for i in range(peopleCount):
+    adjacencyListPersonI = []
+
+    for j in range(peopleCount):
+        if i == j:
+            continue
+
+        if weightedGraph[i][j] > 0:
+            adjacencyListPersonI.append((j, weightedGraph[i][j]))
+
+    adjacencyList.append((i, adjacencyListPersonI))
+
 # Perform clustering
 # Compute number of clusters (= different parties)
 parties = set()
 for i in range(peopleCount):
     parties.add(followingGraphMetadata[i]["partij"])
 
-i, graph, yhats, contracted_leader, mst = affinity_clustering(weightedGraph, len(parties))
+i, graph, yhats, contracted_leader, mst = affinity_clustering(adjacencyList, 1)
 
 print(mst)

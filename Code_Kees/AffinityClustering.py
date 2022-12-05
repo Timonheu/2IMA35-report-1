@@ -6,9 +6,9 @@ from sklearn.datasets import make_circles, make_moons, make_blobs, make_swiss_ro
 from sklearn.neighbors import KDTree
 from argparse import ArgumentParser
 
-from Plotter import *
-from DataReader import *
-from DataModifier import *
+from .Plotter import *
+from .DataReader import *
+from .DataModifier import *
 
 
 def get_clustering_data():
