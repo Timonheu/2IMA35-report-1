@@ -39,4 +39,18 @@ for i in range(peopleCount):
 
 i, graph, yhats, contracted_leader, mst = affinity_clustering(adjacencyList, 1)
 
+
+# Tree construction
+childrenPerRun = []
+for yhat in yhats:
+    children = []
+    for i in range(len(yhat)):
+        childList = []
+        for j in range(len(yhat)):
+            if yhat[i] == yhat[j] and i != j:
+                childList.append(j)
+        children.append(childList)
+    childrenPerRun.append(children)
+
+
 print(mst)
