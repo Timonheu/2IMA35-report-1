@@ -96,7 +96,7 @@ for yhat in yhats:
             originalNodeRepresentingNodeJ = followingGraphMetadata[originalNodeIndexRepresentingNodeJ]
             identifier = originalNodeRepresentingNodeJ["naam"] + " - " + originalNodeRepresentingNodeJ["partij"] + " - level " + str(level)
             clusteringGraphNodeLabels[nodeCount] = identifier
-            clusteringGraphNodeColours.append(colourMap[originalNodeRepresentingNodeJ["partij"]])
+            clusteringGraphNodeColours.append("#000")
 
             nodeCount += 1
 
@@ -108,11 +108,11 @@ for yhat in yhats:
     level += 1
     nodeIndicesOnPreviousLevel = nodeIndicesOnThisLevel
 
-    if level == 3:
-        break
+    # if level == 3:
+    #     break
 
-pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
-#pos = nx.planar_layout(clusteringGraph)
+#pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
+pos = nx.planar_layout(clusteringGraph)
 f = plt.figure(figsize=(60, 60))
 nx.draw_networkx(clusteringGraph, with_labels=False, ax=f.add_subplot(111), pos=pos, node_color=clusteringGraphNodeColours)
 nx.draw_networkx_labels(clusteringGraph, pos, clusteringGraphNodeLabels)
