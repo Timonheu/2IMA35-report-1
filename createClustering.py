@@ -35,26 +35,26 @@ for i in range(peopleCount):
 
 # Create colour map
 colourMap = {
-    "VVD": "#FF7609",
-    "D66": "#ADD5B0",
-    "PVV": "#002961",
-    "CDA": "#28B445",
-    "PVDA": "#E40006",
-    "SP": "#EC1B23",
-    "Groenlinks": "#39A935",
-    "PvDD": "#00743C",
-    "ChristenUnie": "#00a7eb",
-    "FvD": "#B02520",
-    "DENK": "#00B7B2",
-    "Groep van Haga": "#FFC0CB",
-    "JA21": "#242B57",
-    "SGP": "#E95E10",
-    "Volt": "#502379",
-    "BBB": "#95C11F",
-    "Bij1": "#FFFF00",
-    "Fractie Den Haan": "#8B4513",
-    "Gündoğan": "#DCDCDC",
-    "Omtzigt": "#4169E1"
+    "VVD": "#e6194b",
+    "D66": "#3cb44b",
+    "PVV": "#ffe119",
+    "CDA": "#4363d8",
+    "PVDA": "#f58231",
+    "SP": "#911eb4",
+    "Groenlinks": "#46f0f0",
+    "PvDD": "#f032e6",
+    "ChristenUnie": "#bcf60c",
+    "FvD": "#fabebe",
+    "DENK": "#008080",
+    "Groep van Haga": "#e6beff",
+    "JA21": "#9a6324",
+    "SGP": "#fffac8",
+    "Volt": "#800000",
+    "BBB": "#aaffc3",
+    "Bij1": "#808000",
+    "Fractie Den Haan": "#ffd8b1",
+    "Gündoğan": "#000075",
+    "Omtzigt": "#808080"
 }
 
 # Perform clustering
@@ -108,9 +108,12 @@ for yhat in yhats:
     level += 1
     nodeIndicesOnPreviousLevel = nodeIndicesOnThisLevel
 
-#pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
-pos = nx.planar_layout(clusteringGraph)
-f = plt.figure(figsize=(40, 40))
+    if level == 3:
+        break
+
+pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
+#pos = nx.planar_layout(clusteringGraph)
+f = plt.figure(figsize=(60, 60))
 nx.draw_networkx(clusteringGraph, with_labels=False, ax=f.add_subplot(111), pos=pos, node_color=clusteringGraphNodeColours)
 nx.draw_networkx_labels(clusteringGraph, pos, clusteringGraphNodeLabels)
 plt.show()
