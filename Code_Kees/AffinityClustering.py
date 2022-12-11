@@ -6,9 +6,9 @@ from sklearn.datasets import make_circles, make_moons, make_blobs, make_swiss_ro
 from sklearn.neighbors import KDTree
 from argparse import ArgumentParser
 
-from Plotter import *
-from DataReader import *
-from DataModifier import *
+from .Plotter import *
+from .DataReader import *
+from .DataModifier import *
 
 
 def get_clustering_data():
@@ -118,7 +118,7 @@ def find_leader(_lambda):
     return find
 
 
-def affinity_clustering(adj, vertex_coordinates, plot_intermediate, num_clusters=3):
+def affinity_clustering(adj, num_clusters=3):
     conf = SparkConf().setAppName('MST_Algorithm')
     sc = SparkContext.getOrCreate(conf=conf)
     clusters = [[i] for i in range(len(adj))]
@@ -394,7 +394,7 @@ def run(V, k, data_reader, beta=0.0, alpha=0.0, gamma=0.0, buckets=False):
         adjacency_list = get_nearest_neighbours(E, k, buckets=True)
     else:
         adjacency_list = get_nearest_neighbours(V, k)
-    return affinity_clustering(adjacency_list, vertex_coordinates=None, plot_intermediate=False)
+    return affinity_clustering(adjacency_list)
 
 if __name__ == '__main__':
     # Initial call to main function
