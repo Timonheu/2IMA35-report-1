@@ -16,7 +16,7 @@ peopleCount = len(followingGraphMetadata)
 
 # Load graph
 weightedGraph = None
-with open("Data/Output/weightedGraph.json", "r") as graphFile:
+with open("Data/Output/RandomWalk-length-0.5sqrt-people-amount-42/weightedGraph.json", "r") as graphFile:
     weightedGraph = np.fromfile(graphFile).reshape(peopleCount, peopleCount)
 
 # Make adjacency matrix into adjacency list
@@ -110,6 +110,24 @@ for yhat in yhats:
 
     # if level == 3:
     #     break
+
+# Quantify the quality of the clustering
+# Level with the best amount of clusters
+bestLevel = 0
+# difference between the amount of clusters and 20
+bestClusterDifference = 9999
+for level in range(len(yhats)):
+    # find the amount of clusters in this level
+    clusters = len(set(yhats[level]))
+    difference = abs(clusters - len(colourMap))
+    if difference < bestClusterDifference:
+        bestLevel = level
+        bestClusterDifference = difference
+
+chosenLevel = yhats[bestLevel]
+clusters = len(set(chosenLevel))
+print("Number of clusters: " + str(clusters) + " at level " + str(bestLevel))
+
 
 #pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
 pos = nx.planar_layout(clusteringGraph)

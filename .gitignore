@@ -138,3 +138,6 @@ twitter.conf
 
 # jetbrains
 .idea
+
+# used for counting
+*.xcf
