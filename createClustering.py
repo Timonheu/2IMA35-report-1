@@ -16,7 +16,7 @@ peopleCount = len(followingGraphMetadata)
 
 # Load graph
 weightedGraph = None
-with open("Data/Output/RandomWalk-length-0.5sqrt-people-amount-42/weightedGraph.json", "r") as graphFile:
+with open("Data/Output/RandomWalk-length-0.5sqrt-people-amount-126/weightedGraph.json", "r") as graphFile:
     weightedGraph = np.fromfile(graphFile).reshape(peopleCount, peopleCount)
 
 # Make adjacency matrix into adjacency list
@@ -167,11 +167,11 @@ print("b equals: " + str(b))
 finalValue = (a/3) + (b/3) + ((1 - abs(clusters - len(partySet))/len(partySet))/3)
 print("The final value equals: " + str(finalValue))
 
-# #pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
+pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
 # pos = nx.planar_layout(clusteringGraph)
-# f = plt.figure(figsize=(60, 60))
-# nx.draw_networkx(clusteringGraph, with_labels=False, ax=f.add_subplot(111), pos=pos, node_color=clusteringGraphNodeColours)
-# nx.draw_networkx_labels(clusteringGraph, pos, clusteringGraphNodeLabels)
-# plt.show()
-# f.savefig("Data/Output/ClusteringGraph.png")
+f = plt.figure(figsize=(60, 60))
+nx.draw_networkx(clusteringGraph, with_labels=False, ax=f.add_subplot(111), pos=pos, node_color=clusteringGraphNodeColours)
+nx.draw_networkx_labels(clusteringGraph, pos, clusteringGraphNodeLabels)
+plt.show()
+f.savefig("Data/Output/ClusteringGraph.png")
 
