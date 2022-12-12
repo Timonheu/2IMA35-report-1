@@ -129,23 +129,38 @@ for yhat in yhats:
 # output amount of clusters
 chosenLevel = yhats[bestLevel-1]
 clusters = len(set(chosenLevel))
-print("Number of clusters: " + str(clusters) + " at level " + str(bestLevel))
+print("\nNumber of clusters: " + str(clusters) + " at level " + str(bestLevel))
 
 # now that we have the best level, we can calculate the rest
 partySet = set()
 for person in followingGraphMetadata:
     partySet.add(person["partij"])
 
-aCumulative = 0.0  # cumulative value for a, will need to be averaged and normalized
+# calculate and output a
+aCumulative = 0.0  # cumulative value for a, will need to be averaged
 for party in partySet:
     clusterSet = set()
     for i in range(len(chosenLevel)):
         if followingGraphMetadata[i]["partij"] == party:
             clusterSet.add(chosenLevel[i])
     aCumulative += 1/len(clusterSet)
-    # print(party + ": " + str(len(clusterSet)))
 
 print("a equals: " + str(aCumulative/len(partySet)))
+
+# calculate and output b
+clusterSet = set()  # set of all nodes that are leader of a cluster
+for value in chosenLevel:
+    clusterSet.add(value)
+
+bCumulative = 0.0  # cumulative value for b, will need to be averaged
+for leader in clusterSet:
+    clusterPartySet = set()
+    for i in range(len(chosenLevel)):
+        if chosenLevel[i] == leader:  # means the node is in the cluster
+            clusterPartySet.add(followingGraphMetadata[i]["partij"])
+    bCumulative += 1/len(clusterPartySet)
+
+print("b equals: " + str(bCumulative/clusters))
 
 # #pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
 # pos = nx.planar_layout(clusteringGraph)
