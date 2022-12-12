@@ -16,7 +16,7 @@ peopleCount = len(followingGraphMetadata)
 
 # Load graph
 weightedGraph = None
-with open("Data/Output/weightedGraph.json", "r") as graphFile:
+with open("Data/Output/RandomWalk-length-0.5sqrt-people-amount-126/weightedGraph.json", "r") as graphFile:
     weightedGraph = np.fromfile(graphFile).reshape(peopleCount, peopleCount)
 
 # Make adjacency matrix into adjacency list
@@ -80,6 +80,14 @@ for i in range(peopleCount):
 
     nodeCount += 1
 
+
+# Quantify the quality of the clustering
+# Level with the best amount of clusters
+bestLevel = 0
+# difference between the amount of clusters and 20
+bestClusterDifference = 9999
+parties = len(colourMap)
+
 # Add the layers of the clustering
 nodeIndicesOnPreviousLevel = nodeRepresentationOnBaseLevel # Contains per original node the index of the node in clusteringGraph on the previous level which represents that node
 level = 1
@@ -105,14 +113,62 @@ for yhat in yhats:
         nodeJIndexPreviousLevel = nodeIndicesOnPreviousLevel[j]
         clusteringGraph.add_edge(nodeJIndexPreviousLevel, nodeJIndexThisLevel)
 
+        # find the amount of clusters in this level
+        clusters = len(set(yhats[level-1]))
+        difference = abs(clusters - parties)
+        if difference < bestClusterDifference:
+            bestLevel = level
+            bestClusterDifference = difference
+
     level += 1
     nodeIndicesOnPreviousLevel = nodeIndicesOnThisLevel
 
     # if level == 3:
     #     break
 
-#pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
-pos = nx.planar_layout(clusteringGraph)
+# output amount of clusters
+chosenLevel = yhats[bestLevel-1]
+clusters = len(set(chosenLevel))
+print("\nNumber of clusters: " + str(clusters) + " at level " + str(bestLevel))
+
+# now that we have the best level, we can calculate the rest
+partySet = set()
+for person in followingGraphMetadata:
+    partySet.add(person["partij"])
+
+# calculate and output a
+aCumulative = 0.0  # cumulative value for a, will need to be averaged
+for party in partySet:
+    clusterSet = set()
+    for i in range(len(chosenLevel)):
+        if followingGraphMetadata[i]["partij"] == party:
+            clusterSet.add(chosenLevel[i])
+    aCumulative += 1/len(clusterSet)
+
+a = aCumulative/len(partySet)
+print("a equals: " + str(a))
+
+# calculate and output b
+clusterSet = set()  # set of all nodes that are leader of a cluster
+for value in chosenLevel:
+    clusterSet.add(value)
+
+bCumulative = 0.0  # cumulative value for b, will need to be averaged
+for leader in clusterSet:
+    clusterPartySet = set()
+    for i in range(len(chosenLevel)):
+        if chosenLevel[i] == leader:  # means the node is in the cluster
+            clusterPartySet.add(followingGraphMetadata[i]["partij"])
+    bCumulative += 1/len(clusterPartySet)
+
+b = bCumulative/clusters
+print("b equals: " + str(b))
+
+finalValue = (a/3) + (b/3) + ((1 - abs(clusters - len(partySet))/len(partySet))/3)
+print("The final value equals: " + str(finalValue))
+
+pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
+# pos = nx.planar_layout(clusteringGraph)
 f = plt.figure(figsize=(60, 60))
 nx.draw_networkx(clusteringGraph, with_labels=False, ax=f.add_subplot(111), pos=pos, node_color=clusteringGraphNodeColours)
 nx.draw_networkx_labels(clusteringGraph, pos, clusteringGraphNodeLabels)
