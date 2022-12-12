@@ -145,7 +145,8 @@ for party in partySet:
             clusterSet.add(chosenLevel[i])
     aCumulative += 1/len(clusterSet)
 
-print("a equals: " + str(aCumulative/len(partySet)))
+a = aCumulative/len(partySet)
+print("a equals: " + str(a))
 
 # calculate and output b
 clusterSet = set()  # set of all nodes that are leader of a cluster
@@ -160,7 +161,11 @@ for leader in clusterSet:
             clusterPartySet.add(followingGraphMetadata[i]["partij"])
     bCumulative += 1/len(clusterPartySet)
 
-print("b equals: " + str(bCumulative/clusters))
+b = bCumulative/clusters
+print("b equals: " + str(b))
+
+finalValue = (a/3) + (b/3) + ((1 - abs(clusters - len(partySet))/len(partySet))/3)
+print("The final value equals: " + str(finalValue))
 
 # #pos = nx.nx_agraph.graphviz_layout(clusteringGraph)
 # pos = nx.planar_layout(clusteringGraph)
